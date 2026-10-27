@@ -1,0 +1,103 @@
+title: Signature
+icon: user
+
+columns:
+  main:
+    width: 2/3
+    sections:
+      person:
+        type: fields
+        fields:
+          firstname:
+            label: Prénom
+            type: text
+            width: 1/2
+            required: true
+            placeholder: Angélique
+          lastname:
+            label: Nom
+            type: text
+            width: 1/2
+            required: true
+            placeholder: GARCIA
+          role:
+            label: Fonction / Poste
+            type: text
+            required: true
+            placeholder: Gestionnaire Contrats
+          email:
+            label: Adresse email directe
+            type: email
+            required: true
+            width: 1/2
+            placeholder: a.garcia@vivassur.be
+          phone:
+            label: Téléphone direct ou général
+            type: tel
+            width: 1/2
+            default: "087/76.03.00"
+            placeholder: "087/76.03.00"
+          mobile:
+            label: GSM / Mobile
+            type: tel
+            width: 1/2
+            placeholder: "+32 4..."
+            help: "Optionnel - affiché sous le téléphone fixe si renseigné"
+          address:
+            label: Adresse postale
+            type: textarea
+            rows: 3
+            default: "Domaine de Séroule\nRue de Franchimont 1,\n4802 Verviers"
+            help: "Chaque saut de ligne correspond à une ligne affichée dans la signature"
+  sidebar:
+    width: 1/3
+    sections:
+      visuals:
+        type: fields
+        fields:
+          picture:
+            label: Photo de profil
+            type: files
+            multiple: false
+            uploads: true
+            layout: cards
+            image:
+              cover: true
+              ratio: 1/1
+            help: "Photo portrait (format conseillé : 227x251px ou ratio 181x200)"
+          displayed_logo:
+            label: Logo affiché
+            type: radio
+            default: votre-courtier
+            columns: 2
+            options:
+              votre-courtier: Votre Courtier
+              caspea: Caspea
+            help: "Choisissez le logo affiché en bas à droite de la signature"
+      links:
+        type: fields
+        fields:
+          website_label:
+            label: Texte du bouton web
+            type: text
+            default: "Rendez-vous sur www.vivassur.be"
+          website_url:
+            label: URL du site web
+            type: url
+            default: "https://www.vivassur.be"
+          facebook:
+            label: Page Facebook
+            type: url
+            default: "https://www.facebook.com/vivassur"
+          instagram:
+            label: Compte Instagram
+            type: url
+            default: "https://www.instagram.com/vivassur"
+          linkedin:
+            label: Page LinkedIn
+            type: url
+            default: "https://www.linkedin.com/company/vivassur"
+      files:
+        type: files
+        headline: Fichiers de la signature
+        layout: list

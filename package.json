@@ -1,0 +1,14 @@
+{
+  "name": "GO-theme",
+  "version": "1.0.0",
+  "description": "The \"_s\" for Timber: a dead-simple theme that you can build from. The primary purpose of this theme is to provide a file structure rather than a framework for markup or styles. Configure your Sass, scripts, and task runners however you would like!",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass assets/scss/style.scss:assets/css/style.css assets/scss/critical-style.scss:assets/css/critical-style.css -w --style=compressed"
+  },
+  "author": "Grow Online",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.80.3"
+  }
+}

@@ -1,0 +1,60 @@
+Title: Angélique Garcia (Caspea)
+
+----
+
+Firstname: Angélique
+
+----
+
+Lastname: Garcia
+
+----
+
+Role: Gestionnaire Contrats
+
+----
+
+Phone: 087/76.03.00
+
+----
+
+Mobile: 
+
+----
+
+Email: a.garcia@vivassur.be
+
+----
+
+Address: Domaine de Séroule
+Rue de Franchimont 1,
+4802 Verviers
+
+----
+
+Picture:
+- angelique-garcia.png
+
+----
+
+Displayed-Logo: caspea
+
+----
+
+Website-Label: Rendez-vous sur www.vivassur.be
+
+----
+
+Website-Url: https://www.vivassur.be
+
+----
+
+Linkedin: https://www.linkedin.com/company/vivassur
+
+----
+
+Facebook: https://www.facebook.com/vivassur
+
+----
+
+Instagram: https://www.instagram.com/vivassur

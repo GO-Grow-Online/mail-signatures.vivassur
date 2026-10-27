@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Serena GALLO (Votre Courtier) - Viv'assur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+            padding: 40px 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        .header-panel {
+            max-width: 650px;
+            width: 100%;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .badge {
+            background: #0066ff;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #011266;
+            margin: 0;
+        }
+        .btn {
+            background-color: #0066ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 18px;
+            font-size: 13px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+        .btn:hover {
+            background-color: #0052cc;
+            transform: translateY(-1px);
+        }
+        .btn--copied {
+            background-color: #10b981 !important;
+        }
+        .signature-wrapper {
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px -2px rgba(1, 18, 102, 0.08);
+            border: 1px solid #e2e8f0;
+            margin-bottom: 20px;
+        }
+        .instructions {
+            max-width: 650px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            padding: 16px 20px;
+            font-size: 13px;
+            color: #64748b;
+            line-height: 1.5;
+            box-sizing: border-box;
+        }
+        .instructions strong {
+            color: #011266;
+        }
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #011266;
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(1, 18, 102, 0.3);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            pointer-events: none;
+            z-index: 1000;
+        }
+        .toast--visible {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-panel">
+        <div>
+            <h1 class="title">Serena GALLO</h1>
+            <div style="font-size: 13px; color: #0066ff; font-weight: 600; margin-top: 2px;">Gestionnaire Contrats &bull; <span class="badge">Votre Courtier</span></div>
+        </div>
+        <button class="btn" id="btn-copy" onclick="copySignature()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span id="btn-text">Copier la signature</span>
+        </button>
+    </div>
+
+    <div class="signature-wrapper" id="signature-container">
+<!-- DEBUT SIGNATURE EMAIL VIV'ASSUR (Serena GALLO - Votre Courtier) -->
+<table cellpadding="0" cellspacing="0" border="0" style="vertical-align: -webkit-baseline-middle; font-family: Montserrat, Arial, Helvetica, sans-serif; width: 600px; min-width: 600px; max-width: 600px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff;">
+    <tr>
+        <td width="182" valign="top" style="width: 182px; min-width: 182px; max-width: 182px; vertical-align: top; padding: 0; margin: 0; line-height: 0;">
+            <img src="https://www.vivassur.be/mail-signature/pictures/serena-gallo.png" width="182" height="200" alt="Serena GALLO" style="display: block; width: 182px; height: 200px; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; object-fit: cover;" />
+        </td>
+        <td width="273" valign="top" style="width: 273px; min-width: 273px; max-width: 273px; vertical-align: top; padding: 0 0 0 25px; margin: 0; font-family: Montserrat, Arial, Helvetica, sans-serif;">
+            <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
+                <tr>
+                    <td height="20" style="height: 20px; font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-family: Montserrat, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold; line-height: 21px; mso-line-height-rule: exactly; color: #011266; padding: 0 0 2px 0;">
+                        <span style="color: #011266; font-family: Montserrat, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold; line-height: 21px; letter-spacing: -0.2px;">
+                            Serena GALLO
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: Montserrat, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; line-height: 15px; mso-line-height-rule: exactly; color: #0066ff; padding: 0 0 13px 0;">
+                        <span style="color: #0066ff; font-family: Montserrat, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; line-height: 15px;">
+                            Gestionnaire Contrats
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: Montserrat, Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; mso-line-height-rule: exactly; color: #0066ff; padding: 0 0 12px 0;">
+                        <a href="mailto:s.gallo@vivassur.be" style="color: #0066ff; text-decoration: none; font-family: Montserrat, Arial, Helvetica, sans-serif; font-size: 12px;">
+                            <span style="color: #0066ff; text-decoration: none; font-family: Montserrat, Arial, Helvetica, sans-serif; font-size: 12px;">s.gallo@vivassur.be</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: Montserrat, Arial, Helvetica, sans-serif; font-size: 11px; line-height: 13px; mso-line-height-rule: exactly; color: #011266; padding: 0 0 11px 0;">
+                        <a href="https://www.vivassur.be/aide-contact/#gmap" target="_blank" style="color: #011266; text-decoration: none; display: block;">
+                            <span style="display: block; color: #011266; font-size: 11px; line-height: 13px; font-family: Montserrat, Arial, Helvetica, sans-serif; mso-line-height-rule: exactly; text-decoration: none;">Domaine de Séroule</span>
+                            <span style="display: block; color: #011266; font-size: 11px; line-height: 13px; font-family: Montserrat, Arial, Helvetica, sans-serif; mso-line-height-rule: exactly; text-decoration: none;">Rue de Franchimont 1,</span>
+                            <span style="display: block; color: #011266; font-size: 11px; line-height: 13px; font-family: Montserrat, Arial, Helvetica, sans-serif; mso-line-height-rule: exactly; text-decoration: none;">4802 Verviers</span>
+                        </a>
+                        <span style="display: block; color: #011266; font-size: 11px; line-height: 13px; font-family: Montserrat, Arial, Helvetica, sans-serif; mso-line-height-rule: exactly;">
+                            <a href="tel:087760300" style="color: #011266; text-decoration: none;"><span style="color: #011266; text-decoration: none;">087/76.03.00</span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0;">
+                        <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                            <tr>
+                                <td style="vertical-align: middle;">
+                                    <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: separate;">
+                                        <tr>
+                                            <td align="center" style="background-color: #0066ff; border-radius: 12px; padding: 3px 9px; font-family: Montserrat, Arial, Helvetica, sans-serif; font-size: 8.5px; line-height: 11px; mso-line-height-rule: exactly; text-align: center;">
+                                                <a href="https://www.vivassur.be" target="_blank" style="color: #ffffff; text-decoration: none; font-size: 8.5px; font-family: Montserrat, Arial, Helvetica, sans-serif; display: inline-block; white-space: nowrap;">
+                                                    <span style="color: #ffffff; text-decoration: none; font-family: Montserrat, Arial, Helvetica, sans-serif; font-size: 8.5px;">Rendez-vous sur <strong>www.vivassur.be</strong></span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="6" style="width: 6px; font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                <td style="vertical-align: middle; line-height: 0;">
+                                    <a href="https://www.facebook.com/vivassur" target="_blank" style="text-decoration: none; display: inline-block;">
+                                        <img src="https://www.vivassur.be/mail-signature/facebook.png" width="16" height="16" alt="Facebook" style="display: block; width: 16px; height: 16px; border: 0; outline: none; text-decoration: none;" />
+                                    </a>
+                                </td>
+                                <td width="6" style="width: 6px; font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                <td style="vertical-align: middle; line-height: 0;">
+                                    <a href="https://www.instagram.com/vivassur" target="_blank" style="text-decoration: none; display: inline-block;">
+                                        <img src="https://www.vivassur.be/mail-signature/instagram.png" width="16" height="16" alt="Instagram" style="display: block; width: 16px; height: 16px; border: 0; outline: none; text-decoration: none;" />
+                                    </a>
+                                </td>
+                                <td width="6" style="width: 6px; font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                <td style="vertical-align: middle; line-height: 0;">
+                                    <a href="https://www.linkedin.com/company/vivassur" target="_blank" style="text-decoration: none; display: inline-block;">
+                                        <img src="https://www.vivassur.be/mail-signature/linkedin.png" width="16" height="16" alt="LinkedIn" style="display: block; width: 16px; height: 16px; border: 0; outline: none; text-decoration: none;" />
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td width="145" valign="top" align="right" style="width: 145px; min-width: 145px; max-width: 145px; vertical-align: top; text-align: right; padding: 0; margin: 0; line-height: 0;">
+            <img src="https://www.vivassur.be/mail-signature/right-decoration-votre-courtier.png" width="145" height="200" alt="Viv'assur - Votre Courtier" style="display: block; width: 145px; height: 200px; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic;" />
+        </td>
+    </tr>
+</table>
+<!-- FIN SIGNATURE EMAIL VIV'ASSUR -->
+    </div>
+
+    <div class="instructions">
+        <strong>Comment l'installer :</strong> Cliquez sur le bouton bleu ci-dessus pour copier la signature. Ouvrez ensuite les paramètres de signature de votre logiciel de messagerie (Outlook, Apple Mail, Gmail) et collez directement avec <strong>Ctrl+V</strong> (sur PC) ou <strong>Cmd+V</strong> (sur Mac).
+    </div>
+
+    <div id="toast" class="toast">✓ Signature copiée dans le presse-papier !</div>
+
+    <script>
+        function copySignature() {
+            const container = document.getElementById('signature-container');
+            const btn = document.getElementById('btn-copy');
+            const btnText = document.getElementById('btn-text');
+            const toast = document.getElementById('toast');
+
+            const range = document.createRange();
+            range.selectNode(container);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+
+            try {
+                document.execCommand('copy');
+                selection.removeAllRanges();
+                
+                btn.classList.add('btn--copied');
+                btnText.textContent = '✓ Signature copiée !';
+                toast.classList.add('toast--visible');
+
+                setTimeout(() => {
+                    btn.classList.remove('btn--copied');
+                    btnText.textContent = 'Copier la signature';
+                    toast.classList.remove('toast--visible');
+                }, 3000);
+            } catch(e) {
+                alert('Veuillez sélectionner la signature et appuyer sur Ctrl+C / Cmd+C.');
+            }
+        }
+    </script>
+</body>
+</html>

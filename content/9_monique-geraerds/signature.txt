@@ -1,0 +1,60 @@
+Title: Monique Geraerds (Votre Courtier)
+
+----
+
+Firstname: Monique
+
+----
+
+Lastname: Geraerds
+
+----
+
+Role: Gestionnaire Contrats
+
+----
+
+Phone: 087/76.03.00
+
+----
+
+Mobile: 
+
+----
+
+Email: m.geraerds@vivassur.be
+
+----
+
+Address: Domaine de Séroule
+Rue de Franchimont 1,
+4802 Verviers
+
+----
+
+Picture:
+- monique-geraerds.png
+
+----
+
+Displayed-Logo: votre-courtier
+
+----
+
+Website-Label: Rendez-vous sur www.vivassur.be
+
+----
+
+Website-Url: https://www.vivassur.be
+
+----
+
+Linkedin: https://www.linkedin.com/company/vivassur
+
+----
+
+Facebook: https://www.facebook.com/vivassur
+
+----
+
+Instagram: https://www.instagram.com/vivassur

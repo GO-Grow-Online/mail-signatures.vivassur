@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index des Signatures Email - Viv'assur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+            padding: 40px 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 960px;
+            width: 100%;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #011266;
+            margin: 0 0 10px 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        p {
+            color: #64748b;
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        code {
+            background: #e2e8f0;
+            color: #0066ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12.5px;
+        }
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin: 24px 0 20px 0;
+            padding: 16px 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 8px rgba(1, 18, 102, 0.04);
+        }
+        .filters {
+            display: flex;
+            gap: 8px;
+        }
+        .filter-btn {
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            color: #475569;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 12.5px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .filter-btn:hover {
+            background: #e2e8f0;
+            color: #0f172a;
+        }
+        .filter-btn.active {
+            background: #0066ff;
+            border-color: #0066ff;
+            color: #ffffff;
+        }
+        .btn-download {
+            background: #011266;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+        .btn-download:hover {
+            background: #0066ff;
+            transform: translateY(-1px);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            gap: 16px;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            padding: 16px 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 14px;
+            box-shadow: 0 2px 10px rgba(1, 18, 102, 0.04);
+            transition: all 0.2s ease;
+        }
+        .card:hover {
+            border-color: #0066ff;
+            box-shadow: 0 8px 25px rgba(1, 18, 102, 0.08);
+        }
+        .card__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .card__name {
+            font-size: 15.5px;
+            font-weight: 700;
+            color: #011266;
+            margin-bottom: 2px;
+        }
+        .card__role {
+            font-size: 12.5px;
+            color: #0066ff;
+            font-weight: 600;
+        }
+        .badge {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+        }
+        .badge--courtier {
+            background: #eff6ff;
+            color: #0066ff;
+            border: 1px solid #bfdbfe;
+        }
+        .badge--caspea {
+            background: #f1f5f9;
+            color: #011266;
+            border: 1px solid #cbd5e1;
+        }
+        .card__actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 4px;
+        }
+        .card__btn {
+            flex: 1;
+            text-align: center;
+            padding: 7px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            box-sizing: border-box;
+        }
+        .card__btn--primary {
+            background: #0066ff;
+            color: #ffffff;
+        }
+        .card__btn--primary:hover {
+            background: #0052cc;
+        }
+        .card__btn--secondary {
+            background: #f1f5f9;
+            color: #334155;
+            border: 1px solid #e2e8f0;
+        }
+        .card__btn--secondary:hover {
+            background: #e2e8f0;
+            color: #0f172a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Viv'assur &bull; Signatures Email (24 fichiers)</h1>
+            <p>Fichiers HTML autonomes pour chaque collaborateur (déclinés en <strong>Votre Courtier</strong> et <strong>Caspea</strong>).</p>
+            <p style="margin-top: 4px;">Hébergement des ressources : <code>https://www.vivassur.be/mail-signature/assets</code> et <code>https://www.vivassur.be/mail-signature/pictures</code></p>
+        </header>
+
+        <div class="toolbar">
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterCards('all', this)">Toutes (24)</button>
+                <button class="filter-btn" onclick="filterCards('courtier', this)">Votre Courtier (12)</button>
+                <button class="filter-btn" onclick="filterCards('caspea', this)">Caspea (12)</button>
+            </div>
+            <a href="signatures-vivassur.zip" download class="btn-download">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Télécharger tout (.ZIP)
+            </a>
+        </div>
+
+        <div class="grid">
+
+            <div class="card" data-type="courtier">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Angélique GARCIA</div>
+                        <div class="card__role">Gestionnaire Contrats</div>
+                    </div>
+                    <span class="badge badge--courtier">Votre Courtier</span>
+                </div>
+                <div class="card__actions">
+                    <a href="angelique-garcia-votre-courtier.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/angelique-garcia-votre-courtier.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="caspea">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Angélique GARCIA</div>
+                        <div class="card__role">Gestionnaire Contrats</div>
+                    </div>
+                    <span class="badge badge--caspea">Caspea</span>
+                </div>
+                <div class="card__actions">
+                    <a href="angelique-garcia-caspea.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/angelique-garcia-caspea.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="courtier">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Florence PIRLET</div>
+                        <div class="card__role">Gestionnaire Sinistres</div>
+                    </div>
+                    <span class="badge badge--courtier">Votre Courtier</span>
+                </div>
+                <div class="card__actions">
+                    <a href="florence-pirlet-votre-courtier.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/florence-pirlet-votre-courtier.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="caspea">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Florence PIRLET</div>
+                        <div class="card__role">Gestionnaire Sinistres</div>
+                    </div>
+                    <span class="badge badge--caspea">Caspea</span>
+                </div>
+                <div class="card__actions">
+                    <a href="florence-pirlet-caspea.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/florence-pirlet-caspea.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="courtier">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Jean JENNIGES</div>
+                        <div class="card__role">Conseiller Clientèle</div>
+                    </div>
+                    <span class="badge badge--courtier">Votre Courtier</span>
+                </div>
+                <div class="card__actions">
+                    <a href="jean-jenniges-votre-courtier.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/jean-jenniges-votre-courtier.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="caspea">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Jean JENNIGES</div>
+                        <div class="card__role">Conseiller Clientèle</div>
+                    </div>
+                    <span class="badge badge--caspea">Caspea</span>
+                </div>
+                <div class="card__actions">
+                    <a href="jean-jenniges-caspea.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/jean-jenniges-caspea.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="courtier">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Barthélemy JENNIGES</div>
+                        <div class="card__role">Administrateur Délégué</div>
+                    </div>
+                    <span class="badge badge--courtier">Votre Courtier</span>
+                </div>
+                <div class="card__actions">
+                    <a href="barthelemy-jenniges-votre-courtier.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/barthelemy-jenniges-votre-courtier.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="caspea">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Barthélemy JENNIGES</div>
+                        <div class="card__role">Administrateur Délégué</div>
+                    </div>
+                    <span class="badge badge--caspea">Caspea</span>
+                </div>
+                <div class="card__actions">
+                    <a href="barthelemy-jenniges-caspea.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/barthelemy-jenniges-caspea.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="courtier">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Monique GERAERDS</div>
+                        <div class="card__role">Gestionnaire Contrats</div>
+                    </div>
+                    <span class="badge badge--courtier">Votre Courtier</span>
+                </div>
+                <div class="card__actions">
+                    <a href="monique-geraerds-votre-courtier.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/monique-geraerds-votre-courtier.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="caspea">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Monique GERAERDS</div>
+                        <div class="card__role">Gestionnaire Contrats</div>
+                    </div>
+                    <span class="badge badge--caspea">Caspea</span>
+                </div>
+                <div class="card__actions">
+                    <a href="monique-geraerds-caspea.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/monique-geraerds-caspea.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="courtier">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Arnaud MEUNIER</div>
+                        <div class="card__role">Gestionnaire Sinistres</div>
+                    </div>
+                    <span class="badge badge--courtier">Votre Courtier</span>
+                </div>
+                <div class="card__actions">
+                    <a href="arnaud-meunier-votre-courtier.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/arnaud-meunier-votre-courtier.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="caspea">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Arnaud MEUNIER</div>
+                        <div class="card__role">Gestionnaire Sinistres</div>
+                    </div>
+                    <span class="badge badge--caspea">Caspea</span>
+                </div>
+                <div class="card__actions">
+                    <a href="arnaud-meunier-caspea.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/arnaud-meunier-caspea.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="courtier">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Olivier PLANCHON</div>
+                        <div class="card__role">Conseiller Clientèle</div>
+                    </div>
+                    <span class="badge badge--courtier">Votre Courtier</span>
+                </div>
+                <div class="card__actions">
+                    <a href="olivier-planchon-votre-courtier.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/olivier-planchon-votre-courtier.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="caspea">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Olivier PLANCHON</div>
+                        <div class="card__role">Conseiller Clientèle</div>
+                    </div>
+                    <span class="badge badge--caspea">Caspea</span>
+                </div>
+                <div class="card__actions">
+                    <a href="olivier-planchon-caspea.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/olivier-planchon-caspea.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="courtier">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Christianne NJIMA</div>
+                        <div class="card__role">Gestionnaire Sinistres</div>
+                    </div>
+                    <span class="badge badge--courtier">Votre Courtier</span>
+                </div>
+                <div class="card__actions">
+                    <a href="christianne-njima-votre-courtier.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/christianne-njima-votre-courtier.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="caspea">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Christianne NJIMA</div>
+                        <div class="card__role">Gestionnaire Sinistres</div>
+                    </div>
+                    <span class="badge badge--caspea">Caspea</span>
+                </div>
+                <div class="card__actions">
+                    <a href="christianne-njima-caspea.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/christianne-njima-caspea.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="courtier">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Rachel DUBUISSON</div>
+                        <div class="card__role">Gestionnaire Contrats</div>
+                    </div>
+                    <span class="badge badge--courtier">Votre Courtier</span>
+                </div>
+                <div class="card__actions">
+                    <a href="rachel-dubuisson-votre-courtier.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/rachel-dubuisson-votre-courtier.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="caspea">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Rachel DUBUISSON</div>
+                        <div class="card__role">Gestionnaire Contrats</div>
+                    </div>
+                    <span class="badge badge--caspea">Caspea</span>
+                </div>
+                <div class="card__actions">
+                    <a href="rachel-dubuisson-caspea.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/rachel-dubuisson-caspea.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="courtier">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">France JENNIGES</div>
+                        <div class="card__role">Gestionnaire Contrats</div>
+                    </div>
+                    <span class="badge badge--courtier">Votre Courtier</span>
+                </div>
+                <div class="card__actions">
+                    <a href="france-jenniges-votre-courtier.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/france-jenniges-votre-courtier.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="caspea">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">France JENNIGES</div>
+                        <div class="card__role">Gestionnaire Contrats</div>
+                    </div>
+                    <span class="badge badge--caspea">Caspea</span>
+                </div>
+                <div class="card__actions">
+                    <a href="france-jenniges-caspea.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/france-jenniges-caspea.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="courtier">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Serena GALLO</div>
+                        <div class="card__role">Gestionnaire Contrats</div>
+                    </div>
+                    <span class="badge badge--courtier">Votre Courtier</span>
+                </div>
+                <div class="card__actions">
+                    <a href="serena-gallo-votre-courtier.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/serena-gallo-votre-courtier.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="caspea">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Serena GALLO</div>
+                        <div class="card__role">Gestionnaire Contrats</div>
+                    </div>
+                    <span class="badge badge--caspea">Caspea</span>
+                </div>
+                <div class="card__actions">
+                    <a href="serena-gallo-caspea.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/serena-gallo-caspea.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="courtier">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Frank YUNCK</div>
+                        <div class="card__role">Conseiller Clientèle</div>
+                    </div>
+                    <span class="badge badge--courtier">Votre Courtier</span>
+                </div>
+                <div class="card__actions">
+                    <a href="frank-yunck-votre-courtier.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/frank-yunck-votre-courtier.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+            <div class="card" data-type="caspea">
+                <div class="card__top">
+                    <div>
+                        <div class="card__name">Frank YUNCK</div>
+                        <div class="card__role">Conseiller Clientèle</div>
+                    </div>
+                    <span class="badge badge--caspea">Caspea</span>
+                </div>
+                <div class="card__actions">
+                    <a href="frank-yunck-caspea.html" class="card__btn card__btn--primary">Aperçu & Copier</a>
+                    <a href="raw/frank-yunck-caspea.html" class="card__btn card__btn--secondary" title="Code HTML pur pour import direct">HTML Pur</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function filterCards(type, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            document.querySelectorAll('.card').forEach(card => {
+                if (type === 'all' || card.getAttribute('data-type') === type) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

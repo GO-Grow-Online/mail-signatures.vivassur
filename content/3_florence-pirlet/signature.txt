@@ -1,0 +1,60 @@
+Title: Florence Pirlet (Votre Courtier)
+
+----
+
+Firstname: Florence
+
+----
+
+Lastname: Pirlet
+
+----
+
+Role: Gestionnaire Sinistres
+
+----
+
+Phone: 087/76.03.00
+
+----
+
+Mobile: 
+
+----
+
+Email: f.pirlet@vivassur.be
+
+----
+
+Address: Domaine de Séroule
+Rue de Franchimont 1,
+4802 Verviers
+
+----
+
+Picture:
+- florence-pirlet.png
+
+----
+
+Displayed-Logo: votre-courtier
+
+----
+
+Website-Label: Rendez-vous sur www.vivassur.be
+
+----
+
+Website-Url: https://www.vivassur.be
+
+----
+
+Linkedin: https://www.linkedin.com/company/vivassur
+
+----
+
+Facebook: https://www.facebook.com/vivassur
+
+----
+
+Instagram: https://www.instagram.com/vivassur

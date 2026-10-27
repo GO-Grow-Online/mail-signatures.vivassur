@@ -1,0 +1,70 @@
+$primary : #628d9c;
+$primary-dark : #4f6f7b;
+$light : #dbedf4;
+$white: #fff;
+
+body {
+    font-family: "Montserrat"!important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.flex-list {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+
+    }
+    
+}
+
+.btn {
+
+    // Reset 
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: 5px;
+
+    background-color: $primary;
+    color: $white;
+    text-transform: uppercase;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $primary-dark;
+    }
+}
+
+.signature-card {
+    padding: 0 2rem;
+    border: 1px solid $light;
+    border-radius: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    &__title {
+        margin: 0;
+        padding: 0 1rem;
+        background-color: $white;
+        translate: 0 -50%;
+    }
+
+    &__btn {
+        translate: 0 50%;
+    }
+}
